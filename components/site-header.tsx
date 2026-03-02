@@ -27,7 +27,6 @@ export function SiteHeader() {
     if (!audioRef.current) return;
 
     if (playing) {
-      // Wait for any pending play() before pausing
       if (playPromiseRef.current) {
         playPromiseRef.current
           .then(() => {
@@ -45,7 +44,6 @@ export function SiteHeader() {
           playPromiseRef.current = null;
         })
         .catch((err) => {
-          // AbortError is expected if pause is called before play resolves
           if (err.name !== "AbortError") {
             console.error("Audio play error:", err);
           }
@@ -70,8 +68,52 @@ export function SiteHeader() {
         <div className="container flex h-14 items-center">
           <MainNav />
 
-          {/* Mobile nav gets the music toggle */}
-          <MobileNav toggleMusic={toggleMusic} playing={playing} />
+          {/* Mobile: hamburger drawer trigger (left side of ml-auto) */}
+          <div className="ml-auto flex items-center gap-1 md:hidden">
+            {/* Music toggle - visible on mobile */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted"
+              onClick={toggleMusic}
+              title={playing ? "Pause music" : "Play music"}
+            >
+              <Icons.music
+                className={`h-4 w-4 ${playing ? "text-primary" : ""}`}
+              />
+            </Button>
+
+            {/* Theme toggle - visible on mobile */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9 rounded-full relative"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              <ModeSwitcher className="h-4 w-4" />
+            </Button>
+
+            {/* GitHub - visible on mobile */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9 rounded-full"
+              asChild
+            >
+              <Link
+                href={siteConfig.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icons.gitHub className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+            </Button>
+
+            {/* Mobile nav hamburger */}
+            <MobileNav toggleMusic={toggleMusic} playing={playing} />
+          </div>
 
           {/* Desktop right side */}
           <div className="ml-auto hidden items-center gap-2 md:gap-3 md:flex">
@@ -97,7 +139,7 @@ export function SiteHeader() {
               title={playing ? "Pause music" : "Play music"}
             >
               <Icons.music
-                className={`h-4 w-4 ${playing ? "text-blue-500" : ""}`}
+                className={`h-4 w-4 ${playing ? "text-primary" : ""}`}
               />
             </Button>
 
