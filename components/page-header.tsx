@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 function PageHeader({
   className,
@@ -6,10 +6,8 @@ function PageHeader({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <section className={cn('', className)} {...props}>
-      <div className="flex flex-col items-start gap-1 py-0">
-        {children}
-      </div>
+    <section className={cn("", className)} {...props}>
+      <div className="flex flex-col items-start gap-1 py-0">{children}</div>
     </section>
   );
 }
@@ -21,7 +19,7 @@ function PageHeaderHeading({
   return (
     <h1
       className={cn(
-        'text-2xl font-bold leading-tight tracking-tighter sm:text-3xl md:text-4xl lg:leading-[1.1]',
+        'text-xl font-bold leading-tight tracking-tighter sm:text-2xl md:text-3xl lg:leading-[1.1]',
         className
       )}
       {...props}
@@ -36,7 +34,7 @@ function PageHeaderDescription({
   return (
     <p
       className={cn(
-        'w-full text-left text-base font-light text-foreground sm:text-lg',
+        'w-full text-left text-sm font-light text-foreground sm:text-base',
         className
       )}
       {...props}
@@ -51,8 +49,8 @@ function PageActions({
   return (
     <div
       className={cn(
-        'flex w-full items-center justify-start gap-2 my-4 pt-2',
-        className
+        "flex w-full items-center justify-start gap-2 my-4 pt-2",
+        className,
       )}
       {...props}
     />

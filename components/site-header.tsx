@@ -1,18 +1,19 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useRef, useState, useEffect } from 'react';
-import { siteConfig } from '@/config/site';
-import { Button } from './ui/button';
-import { ModeSwitcher, useModeSwitcher } from './mode-switcher';
-import { MainNav } from './main-nav';
-import { MobileNav } from './mobile-nav';
-import { CommandMenu } from './command-menu';
-import { Icons } from './icons';
+import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
+import { siteConfig } from "@/config/site";
+import { Button } from "./ui/button";
+import { ModeSwitcher, useModeSwitcher } from "./mode-switcher";
+import { MainNav } from "./main-nav";
+import { MobileNav } from "./mobile-nav";
+import { CommandMenu } from "./command-menu";
+import { Icons } from "./icons";
 
 export function SiteHeader() {
   const [playing, setPlaying] = useState(false);
   const [time, setTime] = useState<Date | null>(null);
+  const playPromiseRef = useRef<Promise<void> | null>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
   const toggleTheme = useModeSwitcher();
 
@@ -24,19 +25,42 @@ export function SiteHeader() {
 
   const toggleMusic = () => {
     if (!audioRef.current) return;
+
     if (playing) {
-      audioRef.current.pause();
+      // Wait for any pending play() before pausing
+      if (playPromiseRef.current) {
+        playPromiseRef.current
+          .then(() => {
+            audioRef.current?.pause();
+          })
+          .catch(() => {});
+      } else {
+        audioRef.current.pause();
+      }
+      setPlaying(false);
     } else {
-      audioRef.current.play();
+      playPromiseRef.current = audioRef.current.play();
+      playPromiseRef.current
+        ?.then(() => {
+          playPromiseRef.current = null;
+        })
+        .catch((err) => {
+          // AbortError is expected if pause is called before play resolves
+          if (err.name !== "AbortError") {
+            console.error("Audio play error:", err);
+          }
+          playPromiseRef.current = null;
+          setPlaying(false);
+        });
+      setPlaying(true);
     }
-    setPlaying(!playing);
   };
 
-  const formattedTime = time?.toLocaleTimeString('en-IN', {
-    timeZone: 'Asia/Kolkata',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
+  const formattedTime = time?.toLocaleTimeString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
     hour12: false,
   });
 
@@ -60,7 +84,7 @@ export function SiteHeader() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </div>
               <span className="text-xs font-medium tabular-nums tracking-tight">
-                {formattedTime ?? '--:--:--'}
+                {formattedTime ?? "--:--:--"}
               </span>
             </div>
 
@@ -70,10 +94,10 @@ export function SiteHeader() {
               size="icon"
               className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted"
               onClick={toggleMusic}
-              title={playing ? 'Pause music' : 'Play music'}
+              title={playing ? "Pause music" : "Play music"}
             >
               <Icons.music
-                className={`h-4 w-4 ${playing ? 'text-blue-500' : ''}`}
+                className={`h-4 w-4 ${playing ? "text-blue-500" : ""}`}
               />
             </Button>
 
