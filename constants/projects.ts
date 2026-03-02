@@ -1,0 +1,140 @@
+export const projects = [
+  {
+    title: 'Nike Reimagined | Modern Redesign Concept',
+    slug: 'nike-reimagined',
+    tagline: "A sleek and modern redesign of Nike's official web experience built with React and Tailwind CSS.",
+    overview: "Nike Reimagined is a creative redesign project focused on delivering a refined, high-performance web experience inspired by Nike's global brand identity.",
+    features: [
+      'Minimalist and modern user interface design',
+      'Fully responsive layouts optimized for all devices',
+      'Smooth page transitions and animations with Framer Motion',
+      'Optimized build process with Vite for fast loading',
+      'Deployed on Vercel for production-grade performance',
+    ],
+    techStack: ['React.js', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Vercel'],
+    challenges: [
+      "Maintaining brand consistency while reimagining Nike's design language.",
+      'Achieving smooth animations without affecting performance.',
+      'Ensuring pixel-perfect responsiveness across devices.',
+      'Optimizing load times for a better user experience.',
+    ],
+    learnings: [
+      'Mastered efficient UI composition with React and Tailwind CSS.',
+      'Improved understanding of animation principles using Framer Motion.',
+      'Enhanced deployment workflow using Vercel and Vite integration.',
+      'Developed better practices for responsive and scalable frontend design.',
+    ],
+    feedback: false,
+    links: {
+      live: 'https://nike-reimagined-mu.vercel.app/',
+      github: 'https://github.com/adityadomle/nike-reimagined',
+    },
+  },
+  {
+    title: 'Portfolio | Aditya Domle',
+    slug: 'portfolio',
+    tagline: 'A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.',
+    overview: 'My personal portfolio is built to highlight my journey as a developer.',
+    features: [
+      'API to track and display profile views in real-time.',
+      'Love count feature to allow visitors to express appreciation.',
+      'Implemented server actions using the latest Next.js features.',
+      'Dynamic project listing with slug-based routing.',
+      'Mobile-responsive and optimized for all devices.',
+    ],
+    techStack: ['Next.js', 'ShadCN/UI', 'MongoDB', 'Tailwind CSS', 'TypeScript'],
+    challenges: [
+      'Implementing real-time tracking for profile views efficiently.',
+      'Designing and integrating a scalable database schema with Mongoose.',
+      'Utilizing server actions for seamless interactions.',
+    ],
+    learnings: [
+      'Deepened knowledge of Next.js server actions.',
+      'Gained experience in designing interactive UI components.',
+      'Enhanced understanding of MongoDB operations.',
+    ],
+    feedback: true,
+    links: {
+      live: 'https://aadi.is-a.dev',
+      github: 'https://topmate.io/aditya_domle/1773422',
+    },
+  },
+  {
+    title: 'News Hub | Real-Time News Platform',
+    slug: 'news-hub',
+    tagline: 'A real-time news platform delivering the latest headlines using the News API.',
+    overview: 'News Hub is a responsive web app providing real-time news from India and around the world.',
+    features: [
+      'Real-time news updates fetched from the News API.',
+      'Categorized news sections for better content navigation.',
+      'Responsive design for all devices.',
+      'Clean and accessible UI powered by shadcn/ui.',
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'shadcn-ui'],
+    challenges: [
+      'Integrating and managing dynamic data from the News API.',
+      'Optimizing performance and build times using Vite.',
+    ],
+    learnings: [
+      'Improved understanding of working with external APIs in React.',
+      'Enhanced experience in using TypeScript for type-safe development.',
+    ],
+    feedback: true,
+    links: {
+      live: 'https://news-hub-seven-chi.vercel.app/',
+      github: 'https://github.com/adityadomle/news-hub',
+    },
+  },
+  {
+    title: 'Freshmart Store | Modern Grocery Web App',
+    slug: 'freshmart-store',
+    tagline: 'A clean, modern grocery store web app built with React, Vite, Redux, and Tailwind CSS.',
+    overview: 'Freshmart Store is a modern grocery shopping platform focused on performance and smooth navigation.',
+    features: [
+      'Modern and responsive UI optimized for all screen sizes.',
+      'Smooth routing for an app-like experience.',
+      'State management using Redux.',
+      'Fast performance powered by Vite.',
+    ],
+    techStack: ['React', 'Vite', 'Redux', 'Tailwind CSS'],
+    challenges: [
+      'Implementing scalable state management with Redux.',
+      'Ensuring responsive UI across devices.',
+    ],
+    learnings: [
+      'Enhanced understanding of Redux for managing global state.',
+      'Improved skills in responsive UI design.',
+    ],
+    feedback: true,
+    links: {
+      live: 'https://freshmart-store.vercel.app',
+      github: 'https://github.com/adityadomle/freshmart-store',
+    },
+  },
+  {
+    title: 'GitHub Profile Viewer | Instant GitHub Insights',
+    slug: 'github-profile-viewer',
+    tagline: 'An interactive web app to instantly view GitHub profiles with clean UI.',
+    overview: 'GitHub Profile Viewer allows users to instantly fetch and view detailed GitHub profiles using the GitHub REST API.',
+    features: [
+      "Instantly search and view any GitHub user's profile.",
+      'Displays profile picture, username, bio, followers, and repositories.',
+      'Responsive and clean user interface.',
+      'Utilizes GitHub REST API for real-time data.',
+    ],
+    techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub API'],
+    challenges: [
+      'Fetching and managing API data efficiently.',
+      'Handling errors for invalid GitHub users.',
+    ],
+    learnings: [
+      'Strengthened understanding of API integration.',
+      'Improved skills in building responsive layouts.',
+    ],
+    feedback: true,
+    links: {
+      live: 'https://adityadomle.github.io/GitHub-Profile-Viewer/',
+      github: 'https://github.com/adityadomle/GitHub-Profile-Viewer',
+    },
+  },
+];
