@@ -16,13 +16,13 @@ export function SiteFooter() {
               and{' '}
               <span className="font-medium text-foreground">Tailwind CSS</span>
             </span>
-            <span className="hidden sm:inline"> · </span>
+            {/* <span className="hidden sm:inline"> · </span>
             <span className="block sm:inline">
               Coded in{' '}
               <span className="font-medium text-foreground">Cursor</span> and
               deployed with{' '}
               <span className="font-medium text-foreground">Vercel</span>
-            </span>
+            </span> */}
           </div>
           <div className="text-xs text-center sm:text-sm text-muted-foreground">
             Developed by{' '}
@@ -32,7 +32,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium transition-colors text-primary hover:text-primary/80"
             >
-              Aditya Domle
+              Suraj Kumar Saw
             </Link>
           </div>
         </div>

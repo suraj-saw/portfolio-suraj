@@ -14,7 +14,7 @@ export const siteConfig = {
     telegram: 'https://t.me/nexjsx',
     twitter: 'https://x.com/suraj03saw',
     github: 'https://github.com/suraj-saw',
-    githubProfile: 'https://github.com/adityadomle',
+    githubProfile: 'https://github.com/suraj-saw',
     linkedin: 'https://www.linkedin.com/in/suraj-kumar-saw-223b3529a/',
     resume: 'https://drive.google.com/file/d/1uCNPLC60O6LdUsUmyQTXoCF2wUdeb9JZ/view?usp=drive_link',
     email: 'mailto:suraj03saw@gmail.com',
