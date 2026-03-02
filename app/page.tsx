@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader>
-        <PageHeaderHeading>Hi, I&apos;m Aditya Domle 👋</PageHeaderHeading>
+        <PageHeaderHeading>Hi, I&apos;m Suraj Kumar Saw 👋</PageHeaderHeading>
         <PageHeaderDescription>
-          A coder by day, problem-solver by night!
+          A coder, problem-solver and developer with a passion for creating efficient and scalable web applications.
         </PageHeaderDescription>
         <PageHeaderDescription className="text-muted-foreground text-sm mt-1">
-          Full-Stack Web Developer & DevOps enthusiast based in Nagpur, India.
+          Full-Stack Web Developer & DevOps enthusiast based in Delhi, India.
           I build modern web applications with a focus on performance,
           scalability, and clean design.
         </PageHeaderDescription>

@@ -13,17 +13,17 @@ export default function AboutPage() {
 
       <div className="flex flex-col gap-4 text-sm text-foreground/80 leading-relaxed">
         <p>
-          I&apos;m <span className="font-semibold text-foreground">Aditya Domle</span>, a
+          I&apos;m <span className="font-semibold text-foreground">Suraj Kumar Saw</span>, a
           passionate Full-Stack Web Developer and DevOps enthusiast currently pursuing my
-          BCA from GH Raisoni College of Engineering and Management, Nagpur.
+          B.Tech in Computer Science and Engineering from National Institute of Technology, Delhi.
         </p>
         <p>
           My journey into tech started with a curiosity about how websites work, which quickly
           turned into a deep love for building them. I specialize in the{' '}
           <span className="font-semibold text-foreground">MERN stack</span> and enjoy working
           with modern tools like <span className="font-semibold text-foreground">Next.js</span>,{' '}
-          <span className="font-semibold text-foreground">TypeScript</span>, and{' '}
-          <span className="font-semibold text-foreground">Docker</span>.
+          <span className="font-semibold text-foreground">Flutter</span>, and{' '}
+          <span className="font-semibold text-foreground">Firebase</span>.
         </p>
         <p>
           When I&apos;m not coding, I&apos;m exploring open source projects, contributing to the

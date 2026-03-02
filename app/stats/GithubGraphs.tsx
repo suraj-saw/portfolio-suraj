@@ -21,7 +21,7 @@ export default function GitHubGraphs() {
           GitHub Contribution Graph
         </h3>
         <GitHubCalendar
-          username="adityadomle"
+          username="suraj-saw"
           colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
           fontSize={12}
           blockSize={13}

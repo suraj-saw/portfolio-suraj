@@ -8,7 +8,12 @@ import { X } from "lucide-react";
 import { docsConfig } from "@/config/docs";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
-import { Drawer, DrawerTrigger, DrawerContent, DrawerOverlay, DrawerPortal, DrawerClose, DrawerTitle } from "./ui/drawer";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { ModeSwitcher } from "./mode-switcher";
 import { siteConfig } from "@/config/site";
 import { Icons } from "./icons";
@@ -20,6 +25,39 @@ interface MobileNavProps {
 
 export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
   const [open, setOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  // Only render Drawer on client to avoid hydration mismatch with Radix IDs
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // Render plain button on server to avoid aria-controls mismatch
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted md:hidden"
+        aria-label="Open menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="h-5 w-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 9h16.5m-16.5 6.75h16.5"
+          />
+        </svg>
+      </Button>
+    );
+  }
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
@@ -28,8 +66,8 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
           variant="ghost"
           size="icon"
           className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted md:hidden"
+          aria-label="Open menu"
         >
-          {/* Hamburger icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -47,7 +85,6 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
         </Button>
       </DrawerTrigger>
 
-      {/* sr-only title for accessibility */}
       <DrawerTitle className="sr-only">Navigation Menu</DrawerTitle>
 
       <DrawerContent className="h-[88vh] border-t border-border/40 bg-background/95 backdrop-blur-xl">
@@ -146,7 +183,6 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
               {/* Sidebar sections */}
               {docsConfig.sidebarNav.map((section, index) => (
                 <div key={index} className="space-y-1">
-                  {/* Section title */}
                   <p className="px-1 pb-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
                     {section.title}
                   </p>
