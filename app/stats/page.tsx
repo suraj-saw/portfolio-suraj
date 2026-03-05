@@ -5,13 +5,6 @@ import GitHubGraphs from './GithubGraphs';
 export default function StatsPage() {
   return (
     <div className="flex flex-col gap-6">
-      <PageHeader>
-        <PageHeaderHeading>Stats</PageHeaderHeading>
-        <PageHeaderDescription>
-          My GitHub activity and contribution graph.
-        </PageHeaderDescription>
-      </PageHeader>
-
       <GitHubGraphs />
 
       <Pager
