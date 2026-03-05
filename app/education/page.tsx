@@ -9,18 +9,16 @@ const EducationPage = () => {
       <PageHeader className="mb-10">
         <PageHeaderHeading>Education</PageHeaderHeading>
         <PageHeaderHeading className="mt-2 text-muted-foreground">
-          I learned a lot, but the real learning happens in the code editor!
+          My academic journey and the foundations of my technical learning.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          Education has always been the cornerstone of my journey into the tech
-          world. Pursuing a Bachelor&apos;s in Computer Application (BCA) at GH Raisoni
-          College of Engineering and Management, Nagpur, has provided me a
-          strong foundation in computer science and software development.
+          Through my academic journey, I have developed a strong foundation in programming, algorithms, and problem-solving, while also exploring areas such as data analysis, machine learning, and software development.
         </PageHeaderDescription>
         <PageHeaderDescription>
-          My academic journey has been complemented by hands-on projects and
-          coursework, enabling me to build practical skills and a deep
-          understanding of modern technological solutions.
+          My coursework, combined with hands-on projects and self-learning, has helped me bridge the gap between theoretical knowledge and practical application. I believe that the most meaningful learning happens while building and experimenting with real systems.
+        </PageHeaderDescription>
+        <PageHeaderDescription>
+          The following timeline highlights the key stages of my academic journey so far.
         </PageHeaderDescription>
       </PageHeader>
 

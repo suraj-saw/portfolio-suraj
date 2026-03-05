@@ -13,7 +13,7 @@ export default function SkillsToolsPage() {
         </PageHeaderDescription>
       </PageHeader>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3 justify-center">
         {mySkills.map((skill) => {
           const Icon = Icons[skill.icon as keyof typeof Icons];
           return (

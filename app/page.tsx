@@ -10,13 +10,15 @@ export default function Home() {
     <div className="flex flex-col gap-6">
       <PageHeader>
         <PageHeaderHeading>Hi, I&apos;m Suraj Kumar Saw 👋</PageHeaderHeading>
-        <PageHeaderDescription>
+        <br></br>
+        {/* <PageHeaderDescription>
           A coder, problem-solver and developer with a passion for creating efficient and scalable web applications.
+        </PageHeaderDescription> */}
+        <PageHeaderDescription className="text-muted-foreground text-sm mt-1">
+          I'm a Computer Science undergraduate at the National Institute of Technology, Delhi, currently in my third year of B.Tech. I am passionate about software development and enjoy building applications that solve real problems.
         </PageHeaderDescription>
         <PageHeaderDescription className="text-muted-foreground text-sm mt-1">
-          Full-Stack Web Developer & DevOps enthusiast based in Delhi, India.
-          I build modern web applications with a focus on performance,
-          scalability, and clean design.
+          I spend most of my time learning new technologies, developing personal projects, and strengthening my understanding of computer science fundamentals and modern development practices.
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
