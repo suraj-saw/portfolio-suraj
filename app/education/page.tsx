@@ -27,9 +27,11 @@ const EducationPage = () => {
       <TimelineViewer data={education} />
 
       <Pager
-        prevHref="/experience"
+        // prevHref="/experience"
+        prevHref="/skills-tools"
         nextHref="/contact"
-        prevTitle="Experience"
+        // prevTitle="Experience"
+        prevTitle="Skills & Tools"
         nextTitle="Contact"
       />
     </>

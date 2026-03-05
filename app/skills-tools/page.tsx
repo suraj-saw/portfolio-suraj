@@ -30,9 +30,11 @@ export default function SkillsToolsPage() {
 
       <Pager
         prevHref="/projects"
-        nextHref="/experience"
+        // nextHref="/experience"
+        nextHref="/education"
         prevTitle="Projects"
-        nextTitle="Experience"
+        // nextTitle="Experience"
+        nextTitle="Education"
       />
     </div>
   );

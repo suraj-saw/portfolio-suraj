@@ -11,7 +11,7 @@ export const siteConfig = {
   ],
   links: {
     shadcn: 'https://ui.shadcn.com/',
-    telegram: 'https://t.me/nexjsx',
+    telegram: '',
     twitter: 'https://x.com/suraj03saw',
     github: 'https://github.com/suraj-saw',
     githubProfile: 'https://github.com/suraj-saw',

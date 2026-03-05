@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   keywords: siteConfig.keywords,
-  authors: [{ name: 'Aditya Domle', url: 'https://aadi.is-a.dev' }],
-  creator: 'Aditya Domle',
+  authors: [{ name: 'Suraj Kumar Saw', url: '' }],
+  creator: 'Suraj Kumar Saw',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    creator: '@env_aditya',
+    creator: '@suraj03saw',
   },
 };
 
