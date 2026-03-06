@@ -9,6 +9,7 @@ export const mySkills = [
   { title: 'HTML', icon: 'html' },
   { title: 'CSS', icon: 'css' },
   { title: 'JavaScript', icon: 'javascript' },
+  { title: 'TypeScript', icon: 'typescript' },
   { title: 'ReactJS', icon: 'react' },
   { title: 'NextJS', icon: 'nextjs' },
   { title: 'NodeJS', icon: 'nodejs' },
