@@ -12,8 +12,8 @@ export const education: TimelineViewerData[] = [
     description: 'Completed 12th grade with 87.4%.',
   },
   {
-    title: 'Secondary Education · Shivaji Vidyalaya Seloti/Manegaon · SEE',
+    title: 'Secondary Education · DAV Public School · Barhi, Jharkhand',
     date: '2020',
-    description: 'Completed 10th grade with 82%.',
+    description: 'Completed 10th grade with 91.2%.',
   },
 ];
