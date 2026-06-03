@@ -1,10 +1,10 @@
-import { projects } from '@/constants/projects';
-import { notFound } from 'next/navigation';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
-import Pager from '@/components/pager';
+import { projects } from "@/constants/projects";
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github, ArrowLeft, Download } from "lucide-react";
+import Link from "next/link";
+import Pager from "@/components/pager";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -58,13 +58,23 @@ export default async function ProjectDetailPage({
               </Link>
             </Button>
           )}
+          {project.links.apk && (
+            <Button size="sm" variant="outline" asChild>
+              <Link href={project.links.apk} target="_blank">
+                <Download className="mr-1 h-3 w-3" />
+                Download APK
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
 
       <div className="flex flex-col gap-5 text-sm">
         <div>
           <h2 className="font-semibold text-base mb-2">Overview</h2>
-          <p className="text-foreground/80 leading-relaxed">{project.overview}</p>
+          <p className="text-foreground/80 leading-relaxed">
+            {project.overview}
+          </p>
         </div>
 
         <div>

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'subh.dev',
-  url: '',
+  url: 'https://portfolio-suraj-kappa.vercel.app',
   description: 'Portfolio of Suraj Kumar Saw, Full-Stack Web Developer & DevOps enthusiast.',
   keywords: [
     'Suraj Kumar Saw',
